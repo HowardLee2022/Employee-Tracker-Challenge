@@ -1,0 +1,24 @@
+{
+  "name": "employee-tracker-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HowardLee2022/Employee-Tracker-Challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HowardLee2022/Employee-Tracker-Challenge/issues"
+  },
+  "homepage": "https://github.com/HowardLee2022/Employee-Tracker-Challenge#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "inquirer": "^9.1.4",
+    "mysql2": "^3.1.0"
+  }
+}
