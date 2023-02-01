@@ -72,9 +72,6 @@ const viewEmployee = () => {
 })
 }
 
-
-
-
 const addDepartment = () => {
     inquirer.prompt([
         {   
@@ -117,5 +114,37 @@ const addRole = () => {
 
 }
 
+
+const addEmployee = () => {
+    inquirer.prompt([
+        {   
+            type:"input",
+            name:"firstname",
+            message:"What is employee First name?"
+        },
+        {
+            type:"input",
+            name:"lastname",
+            message:"what is employee Last name?"
+        },
+        {
+            type:"input",
+            name:"role",
+            message:"what is employee role id?"
+        },
+        {
+            type:"input",
+            name:"manager",
+            message:"what is employee's manager id?"
+        },
+        
+        
+        ]).then(ans => {
+            db.query('INSERT INTO employee(first_name,last_name,role_id,manager_id) VALUES(?,?,?,?)',[ans.firstname,ans.lastname,ans.role,ans.manager], function (err, results) {
+                console.table(results);
+    })
+        })
+
+}
 
 start();
