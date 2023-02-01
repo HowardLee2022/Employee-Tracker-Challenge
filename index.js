@@ -1,28 +1,21 @@
-const express = require('express');
+// const express = require('express');
 const mysql = require('mysql2');
 const inquirer = require("inquirer");
 
-const PORT = process.env.PORT || 3003;
-const app = express();
+// const PORT = process.env.PORT || 3003;
+// const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
 
 const db = mysql.createConnection(
   {
     host: 'localhost',
     user: 'root',
     password: 'howard',
-    database: 'movie1_db'
+    database: 'challenge12_db'
   },
 );
-
-
-
-
-const employed = [];
-//Function that let user choose 3 option. Add engineer/Add Inter/Quit
-
 
 const start = () =>{
     inquirer.prompt({
@@ -85,7 +78,6 @@ const addDepartment = () => {
                     start();
         })
          })
-
 }
 
 const addRole = () => {

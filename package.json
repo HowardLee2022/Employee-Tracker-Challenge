@@ -1,24 +1,22 @@
 {
-  "name": "employee-tracker-challenge",
+  "name": "unit10hw",
   "version": "1.0.0",
-  "description": "",
+  "description": "OOP and testing for week 10 homework",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HowardLee2022/Employee-Tracker-Challenge.git"
+  "scripts": {
+    "test": "jest --verbose test/*"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HowardLee2022/Employee-Tracker-Challenge/issues"
-  },
-  "homepage": "https://github.com/HowardLee2022/Employee-Tracker-Challenge#readme",
   "dependencies": {
-    "express": "^4.18.2",
-    "inquirer": "^9.1.4",
+    "inquirer": "^6.5.2",
     "mysql2": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
