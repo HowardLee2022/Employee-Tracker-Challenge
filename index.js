@@ -240,7 +240,6 @@ const updateEmployee = () => {
                 ]).then(ans => {
                     const name = ans.employee;
                     const name1 = name.split(" ");
-                    console.log(name1);
                     db.query("SELECT id FROM employees WHERE first_name=? and last_name=?",[name1[0],name1[1]], function (err, data) 
                     { 
                         db.query("SELECT id FROM roles WHERE title=?",[ans.role], function (err,result)
