@@ -20,7 +20,7 @@ const start = () =>{
         type:"list",
         name:"choose",
         message:"What do you want to do?",
-        choices:["View all Departments","View all Roles","View all Employee","Add a Department","Add a Role","Add an Employee","Update An Employee"]
+        choices:["View all Departments","View all Roles","View all Employee","Add a Department","Add a Role","Add an Employee","Update An Employee","Quit"]
     }).then(ans=>{
         if(ans.choose ==="View all Departments"){
             viewDepartment();   
@@ -37,7 +37,7 @@ const start = () =>{
         }else if(ans.choose ==="Update An Employee"){
             updateEmployee();
         }else{
-            return;
+            console.log("goodbye!");
         }
     })
 }
@@ -109,9 +109,6 @@ const addRole = () => {
         //After the prompt there will be a query that insert a new role into the roles table.
         ]).then(ans => {
             db.query('SELECT id FROM departments WHERE name = ?',[ans.department], function (err, results) {
-                console.log(results[0].id);
-                console.log(ans.title);
-                console.log(ans.salary);
                 db.query('INSERT INTO roles(title,salary,department_id) VALUES(?,?,?)', [ans.title,ans.salary,results[0].id], function (err, results) {
                 })
                 start();})

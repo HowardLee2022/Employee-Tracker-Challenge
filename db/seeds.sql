@@ -2,8 +2,6 @@ INSERT INTO departments (name)
 VALUES ("Finance"),
         ("Service");
        
-
-
 INSERT INTO roles (title, salary, department_id)
 VALUES ("Accountant", 100000, 1),
        ("Accountant Manager", 150000, 1),
