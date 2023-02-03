@@ -1,13 +1,16 @@
 INSERT INTO departments (name)
-VALUES ("Math");
+VALUES ("Finance"),
+        ("Service");
        
 
 
 INSERT INTO roles (title, salary, department_id)
-VALUES ("The Great Gatsby", 10, 1),
-       ("Huckleberry Finn", 11, 1),
-       ("100 Years of Solitude", 12, 1),
-       ("Things Fall Apart", 13, 1),
-       ("Crime and Punishment", 14, 1),
-       ("Moby Dick", 15, 1),
-       ("Decameron", 16, 1);
+VALUES ("Accountant", 100000, 1),
+       ("Accountant Manager", 150000, 1),
+       ("Customer Service", 60000, 2),
+       ("Tax Specialist", 100000, 1),
+       ("Waiter", 40000, 2);
+
+INSERT INTO employees(first_name, last_name, role_id, manager_id)
+VALUE ("Howard","Lee",2,null);
+
