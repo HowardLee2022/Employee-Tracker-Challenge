@@ -23,5 +23,6 @@ In this challenger, I learned how to use SQL query to create database, create a 
 - After going through each prompt the application will add or update the database.
 
 ## Features
+[Video](https://drive.google.com/file/d/1DuWm120feEb-KixXjk-mSvyVo9Jy1zbo/view)
 
 Users can keep track of all employees, roles, and department by saving and getting the data from the database. They can manipulate the database by adding to it and updating it.
